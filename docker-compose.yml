@@ -1,0 +1,7 @@
+services:
+  hypatia:
+    build: .
+    volumes:
+      - ./hypatia-workspace:/root/hypatia/workspace
+    stdin_open: true
+    tty: true
