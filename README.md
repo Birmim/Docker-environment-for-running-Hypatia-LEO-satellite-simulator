@@ -1,3 +1,4 @@
+![Docker Build](https://github.com/Birmim/Docker-environment-for-running-Hypatia-LEO-satellite-simulator/actions/workflows/docker-build.yml/badge.svg)
 
 # Hypatia (LEO Satellite Network Simulator) — Docker Environment
 
@@ -81,6 +82,16 @@ Running the official Hypatia install script against modern tooling surfaced
 | `ImportError: cannot import name lgeos` | Shapely 2.0+ removed the interface used by older cartopy | Pin `shapely<2.0` |
 | `unzip: command not found` | Not included in the minimal base image | Added to `apt-get install` |
 | `screen: not found` | `exputilpy` uses screen to manage simulation runs | Added to `apt-get install` |
+
+## License
+
+This repository (Dockerfile, docker-compose.yml, and documentation) is
+licensed under the MIT License — see [LICENSE](LICENSE) for details.
+This project builds and runs [Hypatia](https://github.com/snkas/hypatia)
+(© Kassing, Bhattacherjee, Águas, Saethre, and Singla), which is licensed
+separately: `satgenpy`, `satviz`, and `paper` under MIT, and `ns3-sat-sim`
+under GNU GPLv2. No Hypatia source code is included in this repository —
+it is cloned and compiled at build time from the official repository.
 
 ## Stack
 Ubuntu 18.04 · Python 3.7 · ns-3 · Docker Compose
